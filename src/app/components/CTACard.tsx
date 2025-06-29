@@ -16,7 +16,6 @@ export interface CTACardProps {
   heading: string;
   text: string;
   buttonLabel: string;
-  onButtonClick?: () => void; // Optional for flexibility
   className?: string; // Optional for custom styling
 }
 
@@ -24,7 +23,6 @@ export const CTACard: React.FC<CTACardProps> = ({
   heading,
   text,
   buttonLabel,
-  onButtonClick,
   className = "",
 }) => {
     
@@ -32,7 +30,7 @@ export const CTACard: React.FC<CTACardProps> = ({
     <div className={`bg-white shadow-md rounded-lg p-6 ${className}`}>
       <h2 className="text-xl font-semibold mb-2">{heading}</h2>
       <p className="text-gray-700 mb-4">{text}</p>
-      <Link href={"#"}
+      <Link href="#"
       className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
             {buttonLabel}
       </Link>
