@@ -22,9 +22,11 @@ export default function Accordion() {
                             type='button'
                             onClick={() => {
                                 const newOpenSections = new Set(openSections);
-                                newOpenSections.has(id)
-                                    ? newOpenSections.delete(id)
-                                    : newOpenSections.add(id);
+                                if (newOpenSections.has(id)) {
+                                    newOpenSections.delete(id);
+                                } else {
+                                    newOpenSections.add(id);
+                                }
                                 setOpenSections(newOpenSections);
                             }}>{title}
                             <span className={[

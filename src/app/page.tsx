@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Accordion from "./components/Accordion";
 import { CTACard } from "./components/CTACard";
 
